@@ -11,6 +11,11 @@ type Api struct {
     conn net.Conn
 }
 
+// ✅ Constructor function
+func NewApi(conn net.Conn) *Api {
+    return &Api{conn: conn}
+}
+
 func (a *Api) ReadLine() (string, error) {
     reader := bufio.NewReader(a.conn)
     line, err := reader.ReadString('\n')
@@ -31,6 +36,6 @@ func (a *Api) Handle() {
         }
 
         fmt.Println("Received:", line)
-        // Handle input line (for example: command parsing)
+        // Handle input line (e.g., command parsing)
     }
 }
